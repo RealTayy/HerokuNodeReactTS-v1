@@ -4,13 +4,14 @@ import './index.scss';
 import App from './App';
 import { configure } from "mobx";
 
+// TODO: Re-enable this stuff
 // MobX Configuration
-configure({
-  computedRequiresReaction: true,
-  observableRequiresReaction: true,
-  reactionRequiresObservable: true,
-  enforceActions: "observed"
-})
+// configure({
+//   computedRequiresReaction: true,
+//   observableRequiresReaction: true,
+//   reactionRequiresObservable: true,
+//   enforceActions: "observed"
+// })
 
 ReactDOM.render(
   <React.StrictMode>

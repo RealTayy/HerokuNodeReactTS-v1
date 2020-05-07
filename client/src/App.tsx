@@ -1,11 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
+import { FormCreateFriend } from './components/Forms';
+import { FriendStoreProvider } from './providers';
+import { FriendList } from './components/FriendList';
 
 function App() {
   return (
-    <div className="App">
-      I am app
-    </div>
+    <FriendStoreProvider>
+      <div className="App">
+        <FormCreateFriend />
+        <FriendList />
+      </div>
+    </FriendStoreProvider>
   );
 }
 
