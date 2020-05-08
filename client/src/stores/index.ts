@@ -1,3 +1,3 @@
-import { createFriendStore } from './FriendStore'
+import { FriendStore } from './FriendStore'
 
-export { createFriendStore };
+export { FriendStore as FriendStore };

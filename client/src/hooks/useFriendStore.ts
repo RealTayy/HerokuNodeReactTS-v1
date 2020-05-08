@@ -1,5 +1,4 @@
-import { createContext, useContext } from 'react';
-import { TFriendStore } from '../types';
+import { useContext } from 'react';
 import { friendStoreContext } from '../providers'
 
 const useFriendStore = () => {
