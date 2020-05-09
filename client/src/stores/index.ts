@@ -1,3 +1,3 @@
-import { FriendStore } from './FriendStore'
+import FriendStore from './FriendStore'
 
 export { FriendStore as FriendStore };

@@ -17,7 +17,7 @@ const FriendList: FunctionComponent<TFriendListProps> =
     return (
       <div className="FriendList">
         {title && title}
-        {friends.map((friend) => <FriendListItem friend={friend} />)}
+        {friends.map((friend, i) => <FriendListItem key={i} friend={friend} />)}
       </div>
     )
   })
