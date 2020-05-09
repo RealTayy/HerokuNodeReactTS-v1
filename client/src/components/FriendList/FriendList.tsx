@@ -12,7 +12,6 @@ const FriendList: FunctionComponent<TFriendListProps> =
     isFavorite = false
   }) => {
     const { friendStore } = useStore();
-    const { getFilteredFriends } = friendStore;
     const friends: TFriend[] = friendsFromProp || friendStore.getFilteredFriends({ isSingle, isFavorite })
     return (
       <div className="FriendList">

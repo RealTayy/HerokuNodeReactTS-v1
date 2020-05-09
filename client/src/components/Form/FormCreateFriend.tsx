@@ -6,7 +6,6 @@ import { observer } from 'mobx-react';
 const FormCreateFriend: FunctionComponent<HTMLAttributes<HTMLFormElement>> =
   observer(() => {
     const { friendStore } = useStore();
-    const { friends, makeFriend } = friendStore;
 
     const [friend, setFriend] = useState<TFriend>({
       name: '',
@@ -18,7 +17,7 @@ const FormCreateFriend: FunctionComponent<HTMLAttributes<HTMLFormElement>> =
       e: MouseEvent<HTMLButtonElement>,
     ) => {
       e.preventDefault();
-      makeFriend(friend)
+      friendStore.makeFriend(friend)
     }
 
     const handleOnChange = (
@@ -31,7 +30,7 @@ const FormCreateFriend: FunctionComponent<HTMLAttributes<HTMLFormElement>> =
 
     return (
       <form className="FormCreateFriend">
-        Total friends: {friends.length}
+        Total friends: {friendStore.friends.length}
         <div>
           <label>Name:</label>
           <input
