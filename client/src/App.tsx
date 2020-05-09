@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormCreateFriend } from './components/Forms';
+import { FormCreateFriend } from './components/Form';
 import { FriendList } from './components/FriendList';
 
 function App() {

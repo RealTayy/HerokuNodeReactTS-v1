@@ -1,9 +1,7 @@
 import { useContext, createContext } from 'react';
-import { FriendStore } from '../stores';
+import { RootStore } from '../stores';
 
-export const storeContext = createContext({
-  friendStore: new FriendStore()
-})
+const storeContext = createContext(new RootStore())
 
 const useStore = () => useContext(storeContext);
 

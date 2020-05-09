@@ -1,8 +1,15 @@
 import { observable, action, computed } from 'mobx';
 import { computedFn } from "mobx-utils"
 import { TFriend, TGetFilteredFriendsParams } from '../types';
+import { RootStore } from '.';
 
 class FriendStore {
+  rootStore: RootStore;
+
+  constructor(rootStore: RootStore) {
+    this.rootStore = rootStore
+  }
+
   @observable
   friends: TFriend[] = [];
 
@@ -12,7 +19,7 @@ class FriendStore {
     isFavorite = false,
     isSingle = false
   }: TFriend) => {
-    console.log("Hi")
+    console.log(this)
     const oldFriend = this.friends.find(friend => friend.name === name)
     if (oldFriend) {
       oldFriend.isFavorite = isFavorite
