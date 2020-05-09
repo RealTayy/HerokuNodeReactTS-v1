@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { useFriendStore } from '../../hooks';
+import { useStore } from '../../hooks';
 import { observer } from 'mobx-react';
 import { FriendListItem } from '.';
 import { TFriendListProps, TFriend } from '../../types';
@@ -11,9 +11,11 @@ const FriendList: FunctionComponent<TFriendListProps> =
     isSingle = false,
     isFavorite = false
   }) => {
-    const { getFilteredFriends } = useFriendStore();
-    const friends: TFriend[] = friendsFromProp || getFilteredFriends({ isSingle, isFavorite })
-
+    const { friendStore } = useStore();
+    // const { getFilteredFriends, friends } = friendStore;
+    const friends: TFriend[] = friendsFromProp || friendStore.getFilteredFriends({ isSingle, isFavorite })
+    // console.log(getFilteredFriends({}));
+    // console.log(f2)
     return (
       <div className="FriendList">
         {title && title}

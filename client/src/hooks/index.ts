@@ -1,3 +1,5 @@
-import useFriendStore from './useFriendStore';
+import useStore from './useStore';
 
-export { useFriendStore };
+export {
+  useStore
+};

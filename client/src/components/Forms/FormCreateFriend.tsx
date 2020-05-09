@@ -1,11 +1,12 @@
 import React, { useState, MouseEvent, ChangeEvent, FunctionComponent, HTMLAttributes } from 'react'
-import { useFriendStore } from '../../hooks';
+import { useStore } from '../../hooks';
 import { TFriend } from '../../types';
 import { observer } from 'mobx-react';
 
 const FormCreateFriend: FunctionComponent<HTMLAttributes<HTMLFormElement>> =
   observer(() => {
-    const { friends, makeFriend } = useFriendStore();
+    const { friendStore } = useStore();
+    const { friends, makeFriend } = friendStore;
 
     const [friend, setFriend] = useState<TFriend>({
       name: '',

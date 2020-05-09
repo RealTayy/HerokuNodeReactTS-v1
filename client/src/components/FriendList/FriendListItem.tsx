@@ -6,6 +6,7 @@ const FriendListItem: FunctionComponent<TFriendListItemProps> =
   observer(({
     friend
   }) => {
+    console.log("Rendering")
     const { name, isFavorite, isSingle } = friend;
     return (
       <div className="FriendListItem">
