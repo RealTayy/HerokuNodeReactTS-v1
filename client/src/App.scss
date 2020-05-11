@@ -1,0 +1,11 @@
+@import "./index.scss";
+
+.App {
+  height: 100vh;
+  background-color: $color-platinum;
+  display: flex;
+  flex-direction: column;  
+  &__content {
+    flex-grow: 1;
+  }
+}

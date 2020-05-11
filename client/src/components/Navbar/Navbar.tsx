@@ -1,6 +1,7 @@
 import React, { FunctionComponent, HTMLAttributes } from 'react';
 import { Link } from "react-router-dom";
 import placeholderImgRect from '../../assets/images/placeholderRect.png';
+import classnames from 'classnames';
 
 import './Navbar.scss';
 const links = [
@@ -18,18 +19,18 @@ const links = [
   },
 ]
 
-const Navbar: FunctionComponent<HTMLAttributes<HTMLElement>> = () => {
+const Navbar: FunctionComponent<HTMLAttributes<HTMLElement>> = ({ className }) => {
   return (
-    <nav className="Navbar">
+    <nav className={classnames(['Navbar', className])}>
       <div className="Navbar__logo">
-        <img className="Navbar__logo__image" src={placeholderImgRect} />
-        <div className="Navbar__logo__text">
+        <img className="Navbar__logo-image" src={placeholderImgRect} />
+        <div className="Navbar__logo-text">
           Boiler Plate friend app
         </div>
       </div>
       <ul className="Navbar__list">
         {links.map(link =>
-          <li className="Navbar__list_item">
+          <li className="Navbar__list-item">
             <Link to={link.to}>{link.text}</Link>
           </li>
         )}
