@@ -5,7 +5,6 @@ import App from './App';
 import 'mobx-react-lite/batchingForReactDom'
 import { configure } from "mobx";
 
-// TODO: Re-enable this stuff
 // MobX Configuration
 configure({
   computedRequiresReaction: true,
