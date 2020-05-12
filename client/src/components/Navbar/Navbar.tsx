@@ -29,8 +29,8 @@ const Navbar: FunctionComponent<HTMLAttributes<HTMLElement>> = ({ className }) =
         </div>
       </div>
       <ul className="Navbar__list">
-        {links.map(link =>
-          <li className="Navbar__list-item">
+        {links.map((link, i) =>
+          <li key={i} className="Navbar__list-item">
             <Link to={link.to}>{link.text}</Link>
           </li>
         )}
