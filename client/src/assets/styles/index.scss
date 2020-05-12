@@ -8,4 +8,4 @@
 @import "settings/variables";
 
 // Helpers
-@import "helpers/helpers";
+// Helpers get imported in App.scss to avoid duplicate CSS

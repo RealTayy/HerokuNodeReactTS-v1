@@ -1,6 +1,5 @@
 import React, { FunctionComponent } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
-import { FriendList } from '../../components/FriendList';
 
 const Home: FunctionComponent<RouteComponentProps> = () => {
   return (
