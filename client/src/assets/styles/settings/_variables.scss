@@ -12,16 +12,18 @@ $color-floral-white: #fbfbf2;
 /*----------\
 | Font Size |
 \----------*/
-$font-size-base: 1rem !default;
-$font-size-xsmaller: $font-size-base * 0.5;
-$font-size-xsmall: $font-size-base * 0.625;
-$font-size-smaller: $font-size-base * 0.75;
-$font-size-small: $font-size-base * 0.875;
-$font-size-normal: $font-size-base * 1;
-$font-size-large: $font-size-base * 1.125;
-$font-size-larger: $font-size-base * 1.25;
-$font-size-xlarge: $font-size-base * 1.375;
-$font-size-xlarger: $font-size-base * 1.5;
+$font-size-base:     1rem !default;
+$font-scale:         1.33333;
+$font-scale-neg :    1 / $font-scale;
+$font-size-xsmaller: $font-size-base * pow($font-scale-neg, 4);
+$font-size-xsmall:   $font-size-base * pow($font-scale-neg, 3);
+$font-size-smaller:  $font-size-base * pow($font-scale-neg, 2);
+$font-size-small:    $font-size-base * pow($font-scale-neg, 1);
+$font-size-normal:   $font-size-base;
+$font-size-large:    $font-size-base * pow($font-scale, 1);
+$font-size-larger:   $font-size-base * pow($font-scale, 2);
+$font-size-xlarge:   $font-size-base * pow($font-scale, 3);
+$font-size-xlarger:  $font-size-base * pow($font-scale, 4);
 
 /*--------\
 | Spacing |
