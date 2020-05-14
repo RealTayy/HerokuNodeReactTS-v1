@@ -1,20 +1,19 @@
 const baseColors = {
   white: '#ffffff',
   jet: '#333333',
-  quickSilver: '#a6a2a2',
-  timberwolf: '#cfd2cd',
-  platinum: '#e5e6e4',
-  rocketMetallic: '#847577',
-  floralWhite: '#fbfbf2',
+  eerieBlack: '#141617',
+  silverChalice: '#AEAEAE',
+  charcoal: '#44505A',
+  charlestonGreen: '#1F2428'
 }
 
 const colors = {
   ...baseColors,
-  background: baseColors.rocketMetallic,
-  fontPrimary: baseColors.jet,
-  fontSecondary: baseColors.platinum,
-  primary: baseColors.quickSilver,
-  secondary: baseColors.timberwolf
+  background: baseColors.eerieBlack,
+  fontPrimary: baseColors.silverChalice,
+  fontSecondary: baseColors.charcoal,
+  primary: baseColors.charcoal,
+  secondary: baseColors.charlestonGreen
 }
 
 export { colors };

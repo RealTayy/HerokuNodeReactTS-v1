@@ -1,12 +1,14 @@
 import styled from "styled-components"
 import { colors, fontFamilies, fontSizes, spacers } from "../../assets/styles"
+import { lighten } from 'polished';
 
 export const _Navbar = styled.nav`
   display: flex;
   justify-content: space-between;
-  color: ${colors.floralWhite};
+  align-items: center;
+  color: ${lighten(.3, colors.fontPrimary)};
   background-color: ${colors.primary};
-  padding: 0 ${spacers[3]};
+  padding: ${spacers[2]} ${spacers[3]};
 `
 
 export const _Navbar_Logo = styled.div`
@@ -15,7 +17,7 @@ export const _Navbar_Logo = styled.div`
 `
 
 export const _Navbar_Logo_Image = styled.img`
-  width: 100px;
+  height: 40px;
   margin-right: ${spacers[3]};
 `
 

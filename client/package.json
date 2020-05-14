@@ -21,7 +21,6 @@
     "mobx-react-devtools": "^6.1.1",
     "mobx-utils": "^5.5.7",
     "node-sass": "^4.14.1",
-    "normalize.css": "^8.0.1",
     "polished": "^3.6.3",
     "react": "^16.13.1",
     "react-app-rewire-styled-components": "^3.0.2",
@@ -30,6 +29,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-spring": "^8.0.27",
+    "reset-css": "^5.0.1",
     "styled-components": "^5.1.0",
     "typescript": "^3.7.5"
   },

@@ -9,6 +9,7 @@ const _Base = styled.div`
   line-height: 1.5rem;
   
   a:link, a:visited, a:hover, a:active {
+    color: ${colors.fontPrimary};
     text-decoration: none;
   }
 `

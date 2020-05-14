@@ -1,3 +1,5 @@
+import { modularScale } from 'polished';
+
 const baseFontFamilies = {
   robotoSlab: "'Roboto Slab', serif;",
   raleway: "'Raleway', sans-serif;",
@@ -10,22 +12,20 @@ const fontFamilies = {
 }
 
 const baseFontSizes = {
-  base: 1,
-  suffix: 'rem',
+  base: '1rem',
   scale: 1.33333,
-  negScale: 1 / 1.333333
 }
 
 const fontSizes = {
-  xsmaller: baseFontSizes.base * Math.pow(baseFontSizes.negScale, 4) + baseFontSizes.suffix,
-  xsmall: baseFontSizes.base * Math.pow(baseFontSizes.negScale, 3) + baseFontSizes.suffix,
-  smaller: baseFontSizes.base * Math.pow(baseFontSizes.negScale, 2) + baseFontSizes.suffix,
-  small: baseFontSizes.base * Math.pow(baseFontSizes.negScale, 1) + baseFontSizes.suffix,
-  normal: baseFontSizes.base + baseFontSizes.suffix,
-  large: baseFontSizes.base * Math.pow(baseFontSizes.scale, 1) + baseFontSizes.suffix,
-  larger: baseFontSizes.base * Math.pow(baseFontSizes.scale, 2) + baseFontSizes.suffix,
-  xlarge: baseFontSizes.base * Math.pow(baseFontSizes.scale, 3) + baseFontSizes.suffix,
-  xlarger: baseFontSizes.base * Math.pow(baseFontSizes.scale, 4) + baseFontSizes.suffix,
+  xsmaller: modularScale(-4, baseFontSizes.base, baseFontSizes.scale),
+  xsmall: modularScale(-3, baseFontSizes.base, baseFontSizes.scale),
+  smaller: modularScale(-2, baseFontSizes.base, baseFontSizes.scale),
+  small: modularScale(-1, baseFontSizes.base, baseFontSizes.scale),
+  normal: modularScale(0, baseFontSizes.base, baseFontSizes.scale),
+  large: modularScale(1, baseFontSizes.base, baseFontSizes.scale),
+  larger: modularScale(2, baseFontSizes.base, baseFontSizes.scale),
+  xlarge: modularScale(3, baseFontSizes.base, baseFontSizes.scale),
+  xlarger: modularScale(4, baseFontSizes.base, baseFontSizes.scale),
 }
 
 export { fontFamilies, fontSizes };
