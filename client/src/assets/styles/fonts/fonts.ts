@@ -17,10 +17,10 @@ const baseFontSizes = {
 }
 
 const fontSizes = {
-  xsmaller: baseFontSizes.base * Math.pow(baseFontSizes.scale, 4) + baseFontSizes.suffix,
-  xsmall: baseFontSizes.base * Math.pow(baseFontSizes.scale, 3) + baseFontSizes.suffix,
-  smaller: baseFontSizes.base * Math.pow(baseFontSizes.scale, 2) + baseFontSizes.suffix,
-  small: baseFontSizes.base * Math.pow(baseFontSizes.scale, 1) + baseFontSizes.suffix,
+  xsmaller: baseFontSizes.base * Math.pow(baseFontSizes.negScale, 4) + baseFontSizes.suffix,
+  xsmall: baseFontSizes.base * Math.pow(baseFontSizes.negScale, 3) + baseFontSizes.suffix,
+  smaller: baseFontSizes.base * Math.pow(baseFontSizes.negScale, 2) + baseFontSizes.suffix,
+  small: baseFontSizes.base * Math.pow(baseFontSizes.negScale, 1) + baseFontSizes.suffix,
   normal: baseFontSizes.base + baseFontSizes.suffix,
   large: baseFontSizes.base * Math.pow(baseFontSizes.scale, 1) + baseFontSizes.suffix,
   larger: baseFontSizes.base * Math.pow(baseFontSizes.scale, 2) + baseFontSizes.suffix,
