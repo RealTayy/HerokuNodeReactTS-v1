@@ -2,8 +2,15 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import { Link } from "react-router-dom";
 import placeholderImgRect from '../../assets/images/placeholderRect.png';
 import classnames from 'classnames';
+import {
+  _Navbar,
+  _Navbar_Logo,
+  _Navbar_Logo_Image,
+  _Navbar_Logo_Text,
+  _Navbar_List,
+  _Navbar_List_Item
+} from './NavbarStyles';
 
-import './Navbar.scss';
 const links = [
   {
     to: '/',
@@ -21,21 +28,21 @@ const links = [
 
 const Navbar: FunctionComponent<HTMLAttributes<HTMLElement>> = ({ className }) => {
   return (
-    <nav className={classnames(['Navbar', className])}>
-      <div className="Navbar__logo">
-        <img className="Navbar__logo-image" src={placeholderImgRect} />
-        <div className="Navbar__logo-text">
+    <_Navbar className={classnames(['Navbar', className])}>
+      <_Navbar_Logo >
+        <_Navbar_Logo_Image src={placeholderImgRect} />
+        <_Navbar_Logo_Text >
           Boiler Plate friend app
-        </div>
-      </div>
-      <ul className="Navbar__list">
+        </_Navbar_Logo_Text>
+      </_Navbar_Logo>
+      <_Navbar_List className="Navbar__list">
         {links.map((link, i) =>
-          <li key={i} className="Navbar__list-item">
+          <_Navbar_List_Item key={i} className="Navbar__list-item">
             <Link to={link.to}>{link.text}</Link>
-          </li>
+          </_Navbar_List_Item>
         )}
-      </ul>
-    </nav>
+      </_Navbar_List>
+    </_Navbar>
   )
 }
 

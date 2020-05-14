@@ -1,20 +1,23 @@
-import React from 'react';
+import React, { FunctionComponent, HTMLAttributes } from 'react';
 import { Navbar } from '../Navbar';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Home, AddFriend, Friends, FriendsDetail } from '../../pages';
-import { App, App_Content } from './AppStyles'
-export default () => {
+import { _App, _App_Content } from './AppStyles'
+
+const App: FunctionComponent<HTMLAttributes<HTMLDivElement>> = () => {
   return (
-    <App>
+    <_App>
       <Router>
         <Navbar />
-        <App_Content className="App__content">
+        <_App_Content>
           <Route path="/" exact component={Home} />
           <Route path="/add-friend" exact component={AddFriend} />
           <Route path="/friends" exact component={Friends} />
           <Route path="/friends/:id" exact component={FriendsDetail} />
-        </App_Content>
+        </_App_Content>
       </Router>
-    </App>
+    </_App>
   );
 }
+
+export default App;

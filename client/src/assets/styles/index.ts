@@ -1,3 +1,3 @@
-import { fonts } from './fonts';
-
-export { fonts };
+export * from './fonts';
+export * from './colors';
+export * from './spacers';
