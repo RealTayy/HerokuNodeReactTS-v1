@@ -1,12 +1,13 @@
 import React from 'react';
-import { Navbar } from './components/Navbar';
+import { Navbar } from '../Navbar';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Home, AddFriend, Friends, FriendsDetail } from './pages';
+import { Home, AddFriend, Friends, FriendsDetail } from '../../pages';
+import { App } from './AppStyles'
 
 import './App.scss';
-const App = () => {
+export default () => {
   return (
-    <div className="App">
+    <App>
       <Router>
         <div className="App__navbar">
           <Navbar />
@@ -18,8 +19,6 @@ const App = () => {
           <Route path="/friends/:id" exact component={FriendsDetail} />
         </div>
       </Router>
-    </div>
+    </App>
   );
 }
-
-export default App;

@@ -1,6 +1,8 @@
 @import "./index.scss";
 
 html {
+  background-color: $color-background;
+  color: $font-primary;
   font-family: $font-family-roboto-slab;
   font-size: $font-size-base;
   line-height: 1.5rem;

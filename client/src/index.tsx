@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'normalize.css';
-import './base.scss';
-import App from './App';
+import { App } from './components/App';
 import 'mobx-react-lite/batchingForReactDom'
 import { configure } from "mobx";
 
