@@ -7,4 +7,8 @@ const App = styled.div`
   flex-direction: column;  
 `
 
-export { App }
+const App_Content = styled.div`
+  flex-grow: 1;
+`
+
+export { App, App_Content }

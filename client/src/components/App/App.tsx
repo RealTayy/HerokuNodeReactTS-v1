@@ -2,22 +2,18 @@ import React from 'react';
 import { Navbar } from '../Navbar';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Home, AddFriend, Friends, FriendsDetail } from '../../pages';
-import { App } from './AppStyles'
-
-import './App.scss';
+import { App, App_Content } from './AppStyles'
 export default () => {
   return (
     <App>
       <Router>
-        <div className="App__navbar">
-          <Navbar />
-        </div>
-        <div className="App__content">
+        <Navbar />
+        <App_Content className="App__content">
           <Route path="/" exact component={Home} />
           <Route path="/add-friend" exact component={AddFriend} />
           <Route path="/friends" exact component={Friends} />
           <Route path="/friends/:id" exact component={FriendsDetail} />
-        </div>
+        </App_Content>
       </Router>
     </App>
   );
