@@ -7,6 +7,7 @@ const _Base = styled.div`
   font-family: ${fontFamilies.primary};
   font-size: ${fontSizes.normal};
   line-height: 1.5rem;
+  overflow: hidden;
   
   a:link, a:visited, a:hover, a:active {
     color: ${colors.fontPrimary};

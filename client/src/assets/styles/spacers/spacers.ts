@@ -5,6 +5,7 @@ const baseSpacers = {
 }
 
 const spacers = {
+  ...baseSpacers,
   0: 0,
   1: math(`${baseSpacers.base} * 0.25`),
   2: math(`${baseSpacers.base} * 0.5`),

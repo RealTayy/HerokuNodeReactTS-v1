@@ -4,7 +4,8 @@ const baseColors = {
   eerieBlack: '#141617',
   silverChalice: '#AEAEAE',
   charcoal: '#44505A',
-  charlestonGreen: '#1F2428'
+  charlestonGreen: '#1F2428',
+  gunmetal: '#303840'
 }
 
 const colors = {
@@ -12,7 +13,7 @@ const colors = {
   background: baseColors.eerieBlack,
   fontPrimary: baseColors.silverChalice,
   fontSecondary: baseColors.charcoal,
-  primary: baseColors.charcoal,
+  primary: baseColors.gunmetal,
   secondary: baseColors.charlestonGreen
 }
 
