@@ -4,6 +4,8 @@ import 'reset-css';
 import { App } from './components/App';
 import 'mobx-react-lite/batchingForReactDom'
 import { configure } from "mobx";
+import { BrowserRouter as Router } from 'react-router-dom';
+
 
 // MobX Configuration
 configure({
@@ -15,7 +17,9 @@ configure({
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

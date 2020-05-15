@@ -1,11 +1,16 @@
-import { FriendStore } from ".";
+import {
+  FriendStore,
+  LocationStore
+} from ".";
 
 class RootStore {
   friendStore: FriendStore;
-  
-    constructor() {
-      this.friendStore = new FriendStore(this);
-    }
+  locationStore: LocationStore;
+
+  constructor() {
+    this.friendStore = new FriendStore(this);
+    this.locationStore = new LocationStore(this);
+  }
 }
 
 export default RootStore;

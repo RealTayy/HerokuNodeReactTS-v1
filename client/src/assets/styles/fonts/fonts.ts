@@ -1,13 +1,15 @@
 import { modularScale } from 'polished';
 
 const baseFontFamilies = {
+  roboto: "'Roboto', sans-serif;",
   robotoSlab: "'Roboto Slab', serif;",
   raleway: "'Raleway', sans-serif;",
 }
 
 const fontFamilies = {
   ...baseFontFamilies,
-  primary: baseFontFamilies.robotoSlab,
+  heading: baseFontFamilies.robotoSlab,
+  primary: baseFontFamilies.roboto,
   secondary: baseFontFamilies.raleway
 }
 

@@ -15,8 +15,8 @@ export const _Navbar_Container = styled.div`
 `
 
 export const _Navbar_Logo = styled.div`
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 `
 
 export const _Navbar_Logo_Image = styled.img`
@@ -25,6 +25,7 @@ export const _Navbar_Logo_Image = styled.img`
 `
 
 export const _Navbar_Logo_Text = styled.div`
+  font-family: ${fontFamilies.heading};  
   font-size: ${fontSizes.xlarge};
   line-height: 1;
 `
@@ -36,10 +37,7 @@ export const _Navbar_List = styled.ul`
 `
 
 export const _Navbar_List_Item = styled.li`
-  font-family: ${fontFamilies.raleway};
   text-transform: uppercase;
-  line-height: 1;
   text-decoration: none;
   padding: ${spacers[2]} ${spacers[3]};
-
 `

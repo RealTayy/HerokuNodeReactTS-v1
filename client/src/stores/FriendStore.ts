@@ -19,7 +19,6 @@ class FriendStore {
     isFavorite = false,
     isSingle = false
   }: TFriend) => {
-    console.log(this)
     const oldFriend = this.friends.find(friend => friend.name === name)
     if (oldFriend) {
       oldFriend.isFavorite = isFavorite
