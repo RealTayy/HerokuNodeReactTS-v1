@@ -2,8 +2,7 @@ import styled from "styled-components"
 import { colors, fontFamilies, fontSizes, spacers } from "../../assets/styles"
 import { lighten } from 'polished';
 
-export const _Navbar = styled.nav`
-  color: ${lighten(.3, colors.fontPrimary)};
+export const _Navbar = styled.nav`  
   background-color: ${colors.primary};  
 `
 
@@ -28,6 +27,7 @@ export const _Navbar_Logo_Text = styled.div`
   font-family: ${fontFamilies.heading};  
   font-size: ${fontSizes.xlarge};
   line-height: 1;
+  color: ${lighten(.3, colors.fontPrimary)};
 `
 
 export const _Navbar_List = styled.ul`
@@ -40,4 +40,5 @@ export const _Navbar_List_Item = styled.li`
   text-transform: uppercase;
   text-decoration: none;
   padding: ${spacers[2]} ${spacers[3]};
+  a { color: ${colors.fontSecondary}; }
 `

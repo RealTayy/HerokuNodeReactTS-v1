@@ -41,7 +41,7 @@ const Navbar: FunctionComponent<HTMLAttributes<HTMLElement>> =
             <_Navbar_Logo >
               <_Navbar_Logo_Image src={placeholderImgRect} />
               <_Navbar_Logo_Text >
-                Boiler Plate - {locationStore.pathname}
+                Boiler Plate
               </_Navbar_Logo_Text>
             </_Navbar_Logo>
             <_Navbar_List>
