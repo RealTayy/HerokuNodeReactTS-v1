@@ -1,11 +1,13 @@
 import { TFriend } from '.';
 import { HTMLAttributes } from 'react';
 
-type TFriendListProps = {
+export type TFriendListProps = {
   title?: string,
   friends?: TFriend[],
   isSingle?: boolean,
   isFavorite?: boolean
 } & HTMLAttributes<HTMLDivElement>
 
-export default TFriendListProps;
+export type TFriendListItemProps = {
+  friend: TFriend
+} & HTMLAttributes<HTMLDivElement>

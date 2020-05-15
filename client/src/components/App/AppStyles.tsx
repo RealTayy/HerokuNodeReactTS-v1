@@ -7,11 +7,8 @@ const _Base = styled.div`
   font-family: ${fontFamilies.primary};
   font-size: ${fontSizes.normal};
   line-height: 1.5rem;
-  overflow: hidden;
-  
-  a {    
-    text-decoration: none;
-  }
+  overflow: hidden;  
+  a { text-decoration: none; }
 `
 
 export const _App = styled(_Base)`

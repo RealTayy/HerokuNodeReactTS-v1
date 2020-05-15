@@ -2,7 +2,8 @@ import React, { FunctionComponent } from 'react'
 import { useStore } from '../../hooks';
 import { observer } from 'mobx-react';
 import { FriendListItem } from '.';
-import { TFriendListProps, TFriend } from '../../types';
+import { TFriend } from '../../types';
+import { TFriendListProps } from './TFriendListProps';
 
 const FriendList: FunctionComponent<TFriendListProps> =
   observer(({

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { colors, fontFamilies, fontSizes, spacers } from "../../assets/styles"
 import { lighten } from 'polished';
-
+// Navbar
 export const _Navbar = styled.nav`  
   background-color: ${colors.primary};  
 `
@@ -36,7 +36,8 @@ export const _Navbar_List = styled.ul`
   list-style: none;
 `
 
-export const _Navbar_List_Item = styled.li`
+// NavbarListItem
+export const _NavbarListItem = styled.li`
   text-transform: uppercase;
   text-decoration: none;
   padding: ${spacers[2]} ${spacers[3]};
