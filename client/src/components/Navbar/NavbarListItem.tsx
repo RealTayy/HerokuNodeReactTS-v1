@@ -14,16 +14,13 @@ const NavbarListItem: FunctionComponent<TNavbarListItemProps> =
   }) => {
     const { locationStore } = useStore();
     const isActive = locationStore.getIsActive(link.to);
-    const defaultColor = colors.fontSecondary;
-    const activeColor = lighten(.2, colors.fontSecondary);
-    const hoverColor = lighten(.4, colors.fontSecondary);
     const [isHovered, setIsHovered] = useState(false);
 
     const NLTLSpring = useSpring(
       {
-        color: isHovered ? hoverColor
-          : isActive ? activeColor
-          : defaultColor
+        color: isHovered ? lighten(.4, colors.fontSecondary)
+          : isActive ? lighten(.2, colors.fontSecondary)
+            : colors.fontSecondary
       }
     );
 
