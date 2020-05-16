@@ -9,6 +9,10 @@ const _Base = styled.div`
   line-height: 1.5rem;
   overflow: hidden;  
   a { text-decoration: none; }
+  box-sizing: border-box;
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
 `
 
 export const _App = styled(_Base)`

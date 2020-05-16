@@ -5,11 +5,12 @@ import { Home, AddFriend, Friends, FriendsDetail } from '../../pages';
 import { useStore } from '../../hooks';
 import { _App, _App_Content } from './AppStyles'
 
-const App: FunctionComponent<HTMLAttributes<HTMLDivElement>> = () => { 
-  
+const App: FunctionComponent<HTMLAttributes<HTMLDivElement>> = () => {
+
   // Updates mobX locationStore everytime user navigates to another page
   const { locationStore } = useStore();
-  const { pathname } = useLocation();  
+  const { pathname } = useLocation();
+    
   useEffect(() => {
     locationStore.setPathname(pathname)
   }, [pathname])

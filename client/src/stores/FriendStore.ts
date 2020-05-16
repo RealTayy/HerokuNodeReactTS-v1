@@ -28,6 +28,16 @@ class FriendStore {
     }
   }
 
+  @computed
+  get singleFriends() {
+    return this.friends.filter(friend => friend.isSingle)
+  }
+
+  @computed
+  get favoriteFriends() {
+    return this.friends.filter(friend => friend.isFavorite);
+  }
+
   getFilteredFriends = computedFn(function getFilteredFriends(
     this: FriendStore,
     {
@@ -40,17 +50,6 @@ class FriendStore {
       return true
     })
   })
-
-
-  @computed
-  get singleFriends() {
-    return this.friends.filter(friend => friend.isSingle)
-  }
-
-  @computed
-  get favoriteFriends() {
-    return this.friends.filter(friend => friend.isFavorite);
-  }
 }
 
 export default FriendStore;

@@ -1,8 +1,6 @@
-import React, { FunctionComponent, HTMLAttributes } from 'react';
-import { Link } from "react-router-dom";
+import React, { FunctionComponent, HTMLAttributes, useRef } from 'react';
 import placeholderImgRect from '../../assets/images/placeholderRect.png';
 import { Container } from '../Container';
-import { useStore } from '../../hooks';
 import { NavbarListItem } from '.';
 import {
   _Navbar,
@@ -12,6 +10,7 @@ import {
   _Navbar_Logo_Text,
   _Navbar_List,
 } from './NavbarStyles';
+import { useSpring, useTrail } from 'react-spring';
 
 const links = [
   {
@@ -29,20 +28,35 @@ const links = [
 ]
 
 const Navbar: FunctionComponent<HTMLAttributes<HTMLElement>> =
-  () => {    
+  () => {
+
+    const navbarLogoSpring = useSpring({
+      from: { transform: 'translateY(200%)' },
+      to: { transform: 'translateY(0%)' }
+    });
+
+    const navbarListItemTrail = useTrail(links.length, {
+      from: { transform: 'translateY(200%)' },
+      to: { transform: 'translateY(0%)' }
+    });
+
     return (
       <_Navbar>
         <Container>
           <_Navbar_Container>
-            <_Navbar_Logo >
+            <_Navbar_Logo style={navbarLogoSpring}>
               <_Navbar_Logo_Image src={placeholderImgRect} />
               <_Navbar_Logo_Text >
-                Boiler Plate
+                Boiler Plate App
               </_Navbar_Logo_Text>
             </_Navbar_Logo>
             <_Navbar_List>
-              {links.map((link, i) =>
-                <NavbarListItem key={i} link={link} />
+              {navbarListItemTrail.map((style, i) =>
+                <NavbarListItem
+                  style={style}
+                  key={i}
+                  link={links[i]}
+                />
               )}
             </_Navbar_List>
           </_Navbar_Container>
