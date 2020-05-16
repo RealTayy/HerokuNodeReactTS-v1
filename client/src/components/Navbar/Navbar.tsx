@@ -40,6 +40,8 @@ const Navbar: FunctionComponent<HTMLAttributes<HTMLElement>> =
       to: { transform: 'translateY(0%)' }
     });
 
+    // const navbarHilight = 
+
     return (
       <_Navbar>
         <Container>
@@ -54,7 +56,7 @@ const Navbar: FunctionComponent<HTMLAttributes<HTMLElement>> =
               {navbarListItemTrail.map((style, i) =>
                 <NavbarListItem
                   style={style}
-                  key={i}
+                  key={links[i].to}
                   link={links[i]}
                 />
               )}

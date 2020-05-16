@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useState, useEffect } from 'react';
 import { observer } from 'mobx-react';
 import { useStore } from '../../hooks';
 import { _NavbarListItem, _NavbarListItemLink } from './NavbarStyles';
@@ -14,20 +14,26 @@ const NavbarListItem: FunctionComponent<TNavbarListItemProps> =
   }) => {
     const { locationStore } = useStore();
     const isActive = locationStore.getIsActive(link.to);
-    const defaultColor = isActive ? lighten(.2, colors.fontSecondary) : colors.fontSecondary;
-    const hoverColor = lighten(.4, colors.fontSecondary)
+    const defaultColor = colors.fontSecondary;
+    const activeColor = lighten(.2, colors.fontSecondary);
+    const hoverColor = lighten(.4, colors.fontSecondary);
+    const [isHovered, setIsHovered] = useState(false);
 
     const [{ color }, setLinkStyle] = useSpring(() => (
       { color: defaultColor }
     ))
 
-    setLinkStyle({ color: defaultColor })
+    useEffect(() => {
+      if (isHovered) setLinkStyle({ color: hoverColor })
+      else if (isActive) setLinkStyle({ color: activeColor })
+      else setLinkStyle({ color: defaultColor })
+    }, [isActive, isHovered])
 
     return (
       <_NavbarListItem
         style={style}
-        onMouseEnter={() => setLinkStyle({ color: hoverColor })}
-        onMouseLeave={() => setLinkStyle({ color: defaultColor })}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
         <_NavbarListItemLink
           style={{ color }}
@@ -35,7 +41,7 @@ const NavbarListItem: FunctionComponent<TNavbarListItemProps> =
         >
           {link.text}
         </_NavbarListItemLink>
-      </_NavbarListItem>
+      </_NavbarListItem >
     )
   })
 
