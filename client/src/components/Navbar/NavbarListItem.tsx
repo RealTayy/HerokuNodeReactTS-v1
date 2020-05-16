@@ -19,15 +19,13 @@ const NavbarListItem: FunctionComponent<TNavbarListItemProps> =
     const hoverColor = lighten(.4, colors.fontSecondary);
     const [isHovered, setIsHovered] = useState(false);
 
-    const [{ color }, setLinkStyle] = useSpring(() => (
-      { color: defaultColor }
-    ))
-
-    useEffect(() => {
-      if (isHovered) setLinkStyle({ color: hoverColor })
-      else if (isActive) setLinkStyle({ color: activeColor })
-      else setLinkStyle({ color: defaultColor })
-    }, [isActive, isHovered])
+    const NLTLSpring = useSpring(
+      {
+        color: isHovered ? hoverColor
+          : isActive ? activeColor
+          : defaultColor
+      }
+    );
 
     return (
       <_NavbarListItem
@@ -36,7 +34,7 @@ const NavbarListItem: FunctionComponent<TNavbarListItemProps> =
         onMouseLeave={() => setIsHovered(false)}
       >
         <_NavbarListItemLink
-          style={{ color }}
+          style={NLTLSpring}
           to={link.to}
         >
           {link.text}
