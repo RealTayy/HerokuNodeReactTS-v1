@@ -13,11 +13,7 @@ export const _Navbar_Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: ${spacers[2]} ${spacers[3]};
   overflow: hidden;
-  @media ${devices.tablet} {
-    padding: ${spacers[3]} ${spacers[4]};
-  }
 `
 
 export const _Navbar_Logo = styled(animated.div)`
