@@ -9,7 +9,7 @@ const _Base = styled.div`
   font-family: ${fontFamilies.primary};
   font-size: ${fontSizes.normal};
   line-height: 1.5rem;
-  _App_Content_Route: hidden;  
+  overflow: hidden;  
   a { text-decoration: none; }
   box-sizing: border-box;
   *, *:before, *:after {
@@ -23,17 +23,23 @@ export const _App = styled(_Base)`
 `
 
 export const _App_Navbar = styled.div`
-  padding: ${spacers[2]} ${spacers[3]};
+  padding: 0 ${spacers[3]};
   @media ${devices.tablet} {
-    padding: ${spacers[3]} ${spacers[4]};
+    padding: ${spacers[3]} 0;
   }
 `
 
 export const _App_Content = styled.div`
+  position: relative;
+  overflow: hidden;
   padding: 0 ${spacers[3]};
   @media ${devices.tablet} {
-    padding: ${spacers[3]} ${spacers[4]} 0;
+    padding: ${spacers[3]} 0;
   }
 `
 
-export const _App_Content_Routes = styled(animated.div)``;
+export const _App_Content_Route = styled(animated.div)`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+`;

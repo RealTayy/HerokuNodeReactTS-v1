@@ -4,7 +4,7 @@ import { Route, useLocation, Switch } from 'react-router-dom';
 import { Home, AddFriend, Friends, FriendsDetail } from '../../pages';
 import { useStore } from '../../hooks';
 import { useTransition } from 'react-spring';
-import { _App, _App_Content, _App_Navbar, _App_Content_Routes } from './AppStyles';
+import { _App, _App_Content, _App_Navbar, _App_Content_Route } from './AppStyles';
 
 const App: FunctionComponent<HTMLAttributes<HTMLDivElement>> = () => {
 
@@ -18,9 +18,18 @@ const App: FunctionComponent<HTMLAttributes<HTMLDivElement>> = () => {
   }, [pathname])
 
   const transitions = useTransition(location, location => location.pathname, {
-    from: { transform: 'translate3d(0,-40px,0)' },
-    enter: { transform: 'translate3d(0,0px,0)' },
-    leave: { transform: 'translate3d(0,-40px,0)' },
+    from: {
+      opacity: 0,
+      transform: 'translate3d(0,40px,0)'
+    },
+    enter: {
+      opacity: 1,
+      transform: 'translate3d(0,0px,0)'
+    },
+    leave: {
+      opacity: 0,
+      transform: 'translate3d(0,40px,0)'
+    },
   })
 
 
@@ -35,14 +44,14 @@ const App: FunctionComponent<HTMLAttributes<HTMLDivElement>> = () => {
           props,
           key
         }) =>
-          <_App_Content_Routes key={key} style={props} >
+          <_App_Content_Route key={key} style={props} >
             <Switch location={location}>
               <Route path="/" exact component={Home} />
               <Route path="/friends" exact component={Friends} />
               <Route path="/friends/:id" exact component={FriendsDetail} />
               <Route path="/add-friend" exact component={AddFriend} />
             </Switch>
-          </_App_Content_Routes>
+          </_App_Content_Route>
 
         )}
       </_App_Content>

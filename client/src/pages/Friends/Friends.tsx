@@ -7,22 +7,24 @@ const Friends: FunctionComponent<RouteComponentProps> = () => {
   return (
     <_Friends>
       <Container>
-        <FriendList
-          title="All friends"
-        />
-        <FriendList
-          title="Single friends"
-          isSingle
-        />
-        <FriendList
-          title="Favorite friends"
-          isFavorite
-        />
-        <FriendList
-          title="Single & Favorite Friends"
-          isSingle
-          isFavorite
-        />
+        <_Friends_Container>
+          <FriendList
+            title="All friends"
+          />
+          <FriendList
+            title="Single friends"
+            isSingle
+          />
+          <FriendList
+            title="Favorite friends"
+            isFavorite
+          />
+          <FriendList
+            title="Single & Favorite Friends"
+            isSingle
+            isFavorite
+          />
+        </_Friends_Container>
       </Container>
     </_Friends>
   )
