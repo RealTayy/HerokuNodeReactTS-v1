@@ -30,8 +30,8 @@ const NavbarSidenavToggle: FunctionComponent<HTMLAttributes<HTMLDivElement>> =
     })
 
     const { lineX1, lineX2, lineR } = useSpring({
-      lineX1: isVisible ? 28 : 22,
-      lineX2: isVisible ? 52 : 58,
+      lineX1: isVisible ? 60 : 40,
+      lineX2: isVisible ? 100 : 120,
       lineR: isVisible ? -270 : 0,
     })
 
@@ -42,33 +42,35 @@ const NavbarSidenavToggle: FunctionComponent<HTMLAttributes<HTMLDivElement>> =
         onMouseLeave={() => setIsHovered(false)}
       >
         <_NavbarSidenavToggle_SVG
-          viewBox="0 0 80 80"
-          width="40"
-          height="40"
-          stroke-width="10"
+          viewBox="0 0 160 160"
+          width="80"
+          height="80"
+          stroke-width="20"
           style={{ color: sColor }}
           transform={sr.interpolate(sr => `rotate(${sr})`)}
         >
           <_NavbarSidenavToggle_SVG_Line
             x1={lineX1}
             x2={lineX2}
-            y1="15"
-            y2="15"
+            y1="32"
+            y2="32"
             transform={lineR.interpolate(lineR => `rotate(${lineR})`)}
           />
           <_NavbarSidenavToggle_SVG_Line
-            x1="4"
-            x2="76"
-            y1="40"
-            y2="40"
+            x1="10"
+            x2="150"
+            y1="80"
+            y2="80"            
           />
           <_NavbarSidenavToggle_SVG_Line
             x1={lineX1}
             x2={lineX2}
-            y1="65"
-            y2="65"
+            y1="128"
+            y2="128"
             transform={lineR.interpolate(lineR => `rotate(${lineR})`)}
           />
+          
+
         </_NavbarSidenavToggle_SVG>
       </_NavbarSidenavToggle >
     )

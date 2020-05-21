@@ -87,10 +87,11 @@ export const _NavbarSidenavToggle_SVG = styled(animated.svg)`
 `
 
 export const _NavbarSidenavToggle_SVG_Line = styled(animated.line)`
+  transform-origin: 50% 50%;
   &:first-child {
-    transform-origin: 50% 19%;
+    transform-origin: 50% 20%;
   }
   &:last-child {
-    transform-origin: 50% 81%;
+    transform-origin: 50% 80%;
   }
 `
