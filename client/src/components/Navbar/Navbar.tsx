@@ -1,7 +1,8 @@
-import React, { FunctionComponent, HTMLAttributes, useRef } from 'react';
+import React, { FunctionComponent, HTMLAttributes } from 'react';
 import placeholderImgRect from '../../assets/images/placeholderRect.png';
 import { Container } from '../Container';
-import { NavbarListItem } from '.';
+import { NavbarListItem, NavbarSidenavToggle } from '.';
+import { useSpring, useTrail } from 'react-spring';
 import {
   _Navbar,
   _Navbar_Container,
@@ -9,8 +10,8 @@ import {
   _Navbar_Logo_Image,
   _Navbar_Logo_Text,
   _Navbar_List,
+  _Navbar_SidenavToggle,
 } from './NavbarStyles';
-import { useSpring, useTrail } from 'react-spring';
 
 const links = [
   {
@@ -40,7 +41,11 @@ const Navbar: FunctionComponent<HTMLAttributes<HTMLElement>> =
       to: { transform: 'translateY(0%)' }
     });
 
-    // const navbarHilight = 
+    const navbarSidenavToggleSpring = useSpring({
+      from: { transform: 'translateY(200%)' },
+      to: { transform: 'translateY(0%)' },
+      delay: 300,
+    })
 
     return (
       <_Navbar>
@@ -61,6 +66,9 @@ const Navbar: FunctionComponent<HTMLAttributes<HTMLElement>> =
                 />
               )}
             </_Navbar_List>
+            <_Navbar_SidenavToggle style={navbarSidenavToggleSpring}>
+              <NavbarSidenavToggle />
+            </_Navbar_SidenavToggle>
           </_Navbar_Container>
         </Container>
       </_Navbar>

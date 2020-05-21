@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState, useEffect } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 import { observer } from 'mobx-react';
 import { useStore } from '../../hooks';
 import { _NavbarListItem, _NavbarListItemLink } from './NavbarStyles';

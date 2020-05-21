@@ -1,7 +1,9 @@
+import RootStore from './RootStore';
 import FriendStore from './FriendStore';
 import LocationStore from './LocationStore';
-import RootStore from './RootStore';
+import SidenavStore from './SidenavStore';
 
-export { FriendStore };
 export { RootStore };
+export { FriendStore };
 export { LocationStore };
+export { SidenavStore };

@@ -23,7 +23,9 @@ export const _App = styled(_Base)`
 `
 
 export const _App_Navbar = styled.div`
-  padding: 0 ${spacers[3]};
+  position: relative;
+  overflow: hidden;
+  padding: ${spacers[3]};
   @media ${devices.tablet} {
     padding: ${spacers[3]} 0;
   }
