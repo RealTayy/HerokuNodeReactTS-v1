@@ -1,3 +1,4 @@
+// https://coolors.co/ffffff-333333-141617-aeaeae-56626b-1f2428-303840
 const baseColors = {
   white: '#ffffff',
   jet: '#333333',

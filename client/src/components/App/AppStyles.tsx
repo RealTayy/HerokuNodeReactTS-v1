@@ -41,7 +41,6 @@ export const _App_Content = styled.div`
 `
 
 export const _App_Content_Route = styled(animated.div)`
-  position: absolute;
   width: 100%;
   height: 100%;
 `;
