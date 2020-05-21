@@ -4,13 +4,11 @@ import { observer } from 'mobx-react';
 import { useSpring } from 'react-spring';
 import { colors } from "../../assets/styles";
 import { lighten } from 'polished';
-
 import {
   _NavbarSidenavToggle,
   _NavbarSidenavToggle_SVG,
   _NavbarSidenavToggle_SVG_Line,
 } from './NavbarStyles';
-
 
 const NavbarSidenavToggle: FunctionComponent<HTMLAttributes<HTMLDivElement>> =
   observer(() => {
@@ -60,7 +58,7 @@ const NavbarSidenavToggle: FunctionComponent<HTMLAttributes<HTMLDivElement>> =
             x1="10"
             x2="150"
             y1="80"
-            y2="80"            
+            y2="80"
           />
           <_NavbarSidenavToggle_SVG_Line
             x1={lineX1}
@@ -69,7 +67,7 @@ const NavbarSidenavToggle: FunctionComponent<HTMLAttributes<HTMLDivElement>> =
             y2="128"
             transform={lineR.interpolate(lineR => `rotate(${lineR})`)}
           />
-          
+
 
         </_NavbarSidenavToggle_SVG>
       </_NavbarSidenavToggle >

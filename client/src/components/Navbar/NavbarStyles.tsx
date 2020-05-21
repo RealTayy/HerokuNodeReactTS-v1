@@ -68,7 +68,6 @@ export const _NavbarListItemLink = styled(animated(Link))`
 `
 
 // NavbarSidenavToggle
-
 export const _NavbarSidenavToggle = styled(animated.div)`
   position: relative;
   height: 30px;
@@ -87,7 +86,6 @@ export const _NavbarSidenavToggle_SVG = styled(animated.svg)`
 `
 
 export const _NavbarSidenavToggle_SVG_Line = styled(animated.line)`
-  transform-origin: 50% 50%;
   &:first-child {
     transform-origin: 50% 20%;
   }
